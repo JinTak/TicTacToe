@@ -1,0 +1,61 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+    
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bungee', sans-serif;
+    color: limegreen;
+    font-size: 100px;
+    padding-top: 100px;
+    text-shadow: 0 0 15px lime;
+}
+
+table {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+    border-spacing: 15px;
+}
+td {
+    border: 2px solid limegreen;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    color: lime;
+    font-size: 50px;
+}
+
+/* Button Styling */
+#clear {
+    height: 60px;
+    width: 200px;
+    padding: 5px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background-color: limegreen;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Bungee', sans-serif;
+}

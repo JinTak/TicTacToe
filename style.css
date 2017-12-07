@@ -46,13 +46,28 @@ td {
 }
 
 /* Button Styling */
-#clear {
+#clearBoard {
     height: 60px;
     width: 200px;
     padding: 5px;
     position: absolute;
     top: 85%;
-    left: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background-color: limegreen;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Bungee', sans-serif;
+}
+#resetScore {
+    height: 60px;
+    width: 200px;
+    padding: 5px;
+    position: absolute;
+    top: 85%;
+    left: 60%;
     transform: translate(-50%, -50%);
     border: none;
     outline: none;
@@ -144,3 +159,35 @@ td {
         transform: scale(1.7);
     }
 }
+
+/* Scoreboard */
+.player1Score {
+    /* border: 1px solid pink; */
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    font-size: 25px;
+    color: rgb(0,191,255);
+    font-family: 'Bungee', sans-serif;
+   
+}
+
+.player2Score {
+    /* border: 1px solid pink; */
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-size: 25px;
+    color: rgb(0,191,255);
+    font-family: 'Bungee', sans-serif;
+    
+}
+
+.putScoreHere1, .putScoreHere2 {
+    font-size: 60px;
+}
+

@@ -1,6 +1,8 @@
 $(document).ready(function(){
     // Global variables
     $clickCounter = 0;
+    $player1Score = 0;
+    $player2Score = 0;
     $x = "X";
     $o = "O";
 
@@ -28,7 +30,9 @@ $(document).ready(function(){
                     ($('#3').html() == $x && $('#5').html() == $x && $('#7').html() == $x) 
                         
                     ){
-                    $('#playerTurn').html('Player 1 Wins!').addClass('winner');;
+                    $player1Score++;
+                    $('#playerTurn').html('Player <span class="yellow">1</span> Wins!').addClass('winner');;
+                    $('.putScoreHere1').html($player1Score);
                     $('#gameOver').html("GAME OVER!");
                     // $('.data').off("click");
                     }
@@ -41,7 +45,6 @@ $(document).ready(function(){
             } else {
                 $(this).html($o).addClass("purple");
                 $('#playerTurn').html("Player <span class='yellow'>1</span>'s Turn");
-                // $(this).addClass('background-pink');
                 if (
                     // Rows
                     ($('#1').html() == $o && $('#2').html() == $o && $('#3').html() == $o) || 
@@ -57,7 +60,9 @@ $(document).ready(function(){
                     ($('#1').html() == $o && $('#5').html() == $o && $('#9').html() == $o) || 
                     ($('#3').html() == $o && $('#5').html() == $o && $('#7').html() == $o)  
                 ){
-                    $('#playerTurn').html('Player 2 Wins!').addClass('winner');
+                    $player2Score++;
+                    $('#playerTurn').html('Player <span class="purple">2</span> Wins!').addClass('winner');
+                    $('.putScoreHere2').html($player2Score);
                     $('#gameOver').html("GAME OVER!");
                     // $('.data').off("click");
                 }
@@ -74,8 +79,7 @@ $(document).ready(function(){
     
 
     // Clear Board Function
-    $('#clear').click(function(){
-        
+    $('#clearBoard').click(function(){
         $('.data').html(""); 
         $('.data').removeClass('purple yellow blue');
         $('#playerTurn').html("");
@@ -84,5 +88,13 @@ $(document).ready(function(){
         $('#gameOver').html("");
         $('#playerTurn').html("Player <span class='yellow'>1</span>'s Turn");
         $clickCounter = 0; 
+    });
+
+    // Reset Score Function
+    $('#resetScore').click(function(){
+        $player1Score = 0;
+        $player2Score = 0;
+        $('.putScoreHere1').html($player1Score);
+        $('.putScoreHere2').html($player2Score);
     });
 });

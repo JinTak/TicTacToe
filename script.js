@@ -9,8 +9,8 @@ $(document).ready(function(){
 
         if($(this).html() == ""){
             if($clickCounter % 2 == 0){
-                $(this).html($x);
-                $('#playerTurn').html("Player 2's Turn");
+                $(this).html($x).addClass("yellow");
+                $('#playerTurn').html("Player <span class='purple'>2</span>'s Turn");
                 // $(this).addClass('background-blue');
                 if(     
                     // Rows
@@ -28,7 +28,7 @@ $(document).ready(function(){
                     ($('#3').html() == $x && $('#5').html() == $x && $('#7').html() == $x) 
                         
                     ){
-                    $('#playerTurn').html('Player 1 Wins!');
+                    $('#playerTurn').html('Player 1 Wins!').addClass('winner');;
                     $('#gameOver').html("GAME OVER!");
                     // $('.data').html(""); 
                     // $('.data').removeClass('background-blue');
@@ -37,13 +37,13 @@ $(document).ready(function(){
 
                     }
                 if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
-                    $('#playerTurn').remove();
+                    $('#playerTurn').hide();
                     $('#gameOver').html("CAT'S GAME!");
                 }
                 $clickCounter++;
             } else {
-                $(this).html($o);
-                $('#playerTurn').html("Player 1's Turn");
+                $(this).html($o).addClass("purple");
+                $('#playerTurn').html("Player <span class='yellow'>1</span>'s Turn");
                 // $(this).addClass('background-pink');
                 if (
                     // Rows
@@ -60,7 +60,7 @@ $(document).ready(function(){
                     ($('#1').html() == $o && $('#5').html() == $o && $('#9').html() == $o) || 
                     ($('#3').html() == $o && $('#5').html() == $o && $('#7').html() == $o)  
                 ){
-                    $('#playerTurn').html('Player 2 Wins!');
+                    $('#playerTurn').html('Player 2 Wins!').addClass('winner');
                     $('#gameOver').html("GAME OVER!");
                     // $('.data').html(""); 
                     // $('.data').removeClass('background-blue');
@@ -68,7 +68,7 @@ $(document).ready(function(){
                     // $clickCounter = 0; 
                 }
                 if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
-                    $('#playerTurn').remove();
+                    $('#playerTurn').hide();
                     $('#gameOver').html("CAT'S GAME!");
                 }
                 $clickCounter++;
@@ -81,11 +81,14 @@ $(document).ready(function(){
     // Clear Board Function
     $('#clear').click(function(){
         $('.data').html(""); 
-        $('.data').removeClass('background-blue');
-        $('.data').removeClass('background-pink');
+        // $('.data').removeClass('background-blue');
+        // $('.data').removeClass('background-pink');
+        $('.data').removeClass('purple yellow');
         $('#playerTurn').html("");
+        $('#playerTurn').show();
+        $('#playerTurn').removeClass("winner");
         $('#gameOver').html("");
-        $('#playerTurn').html("Player 1's Turn");
+        $('#playerTurn').html("Player <span class='yellow'>1</span>'s Turn");
         $clickCounter = 0; 
     });
 });

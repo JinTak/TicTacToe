@@ -31,11 +31,12 @@ table {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 70px;
+    margin-top: 80px;
+    border-collapse: collapse;
     /* border-spacing: 15px; */
 }
 td {
-    border: 3px solid limegreen;
+    border: 5px solid limegreen;
     height: 100px;
     width: 100px;
     cursor: pointer;
@@ -106,13 +107,44 @@ td {
     color: rgb(0,191,255);
     text-shadow: 0 0 2px rgb(0,191,255);
     font-family: 'Bungee', sans-serif;
+    margin-bottom: 10px;
 }
 #gameOver {
     font-size: 30px;
     color: rgb(255,0,0);
     font-family: 'Bungee', sans-serif;
+    margin-top: 10px;
 }
 
-span {
-    color: rgb(255,0,0);
+.purple {
+    color: #FF00A5;
+    text-shadow: 0 0 2px #FF00A5;
+}
+
+.yellow {
+    color: yellow;
+    text-shadow: 0 0 2px yellow;
+}
+
+.blue {
+    color: rgb(0,191,255);
+    text-shadow: 0 0 2px rgb(0,191,255);
+}
+
+.winner {
+    animation-duration: 1s;
+    animation-name: winnerText;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes winnerText {
+    0%{
+        font-size: 30px;
+    }
+    100%{
+        transform: scale(1.7);
+    }
 }

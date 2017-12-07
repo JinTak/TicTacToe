@@ -31,11 +31,11 @@ table {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 50px;
+    margin-top: 70px;
     /* border-spacing: 15px; */
 }
 td {
-    border: 2px solid limegreen;
+    border: 3px solid limegreen;
     height: 100px;
     width: 100px;
     cursor: pointer;
@@ -62,6 +62,55 @@ td {
 }
 
 /* Cell Selected Styles */
-/* .selected {
-    
+/* .background-blue {
+    background-color: rgba(0,0,255,0.4);
+}
+
+.background-pink {
+    background-color: rgba(255,192,203,0.4);
 } */
+
+[id="1"] {
+    border-top: none;
+    border-left: none;
+}
+[id="2"] {
+    border-top: none;
+}
+[id="3"] {
+    border-top: none;
+    border-right: none;
+}
+[id="4"] {
+    border-left: none;
+}
+[id="5"] {
+    
+}
+[id="6"] {
+    border-right: none;
+}
+[id="7"] {
+    border-bottom: none;
+    border-left: none;
+}
+[id="8"] {
+    border-bottom: none;
+}
+[id="9"] {
+    border-bottom: none;
+    border-right: none;
+}
+
+
+#playerTurn {
+    font-size: 30px;
+    color: rgb(0,191,255);
+    text-shadow: 0 0 2px rgb(0,191,255);
+    font-family: 'Bungee', sans-serif;
+}
+#gameOver {
+    font-size: 30px;
+    color: red;
+    font-family: 'Bungee', sans-serif;
+}

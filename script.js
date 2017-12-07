@@ -1,11 +1,13 @@
 $(document).ready(function(){
-
+    // Global variables
     $clickCounter = 0;
+    $player1Score = 0;
+    $player2Score = 0;
     $x = "X";
     $o = "O";
 
-    // Set Marker
-    $('.data').click(function(){
+    // Setting 'x' or 'o'
+    $('.data').click(function playGame(){
 
         if($(this).html() == ""){
             if($clickCounter % 2 == 0){
@@ -28,23 +30,20 @@ $(document).ready(function(){
                     ($('#3').html() == $x && $('#5').html() == $x && $('#7').html() == $x) 
                         
                     ){
-                    $('#playerTurn').html('Player 1 Wins!').addClass('winner');;
+                    $player1Score++;
+                    $('#playerTurn').html('Player <span class="yellow">1</span> Wins!').addClass('winner');;
+                    $('.putScoreHere1').html($player1Score);
                     $('#gameOver').html("GAME OVER!");
-                    // $('.data').html(""); 
-                    // $('.data').removeClass('background-blue');
-                    // $('.data').removeClass('background-pink');
-                    // $clickCounter = 0; 
-
+                    // $('.data').off("click");
+                    }else if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
+                        $('#playerTurn').hide();
+                        $('#gameOver').html("CAT'S GAME!");
+                        // $('.data').off("click");
                     }
-                if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
-                    $('#playerTurn').hide();
-                    $('#gameOver').html("CAT'S GAME!");
-                }
                 $clickCounter++;
             } else {
                 $(this).html($o).addClass("purple");
                 $('#playerTurn').html("Player <span class='yellow'>1</span>'s Turn");
-                // $(this).addClass('background-pink');
                 if (
                     // Rows
                     ($('#1').html() == $o && $('#2').html() == $o && $('#3').html() == $o) || 
@@ -60,16 +59,15 @@ $(document).ready(function(){
                     ($('#1').html() == $o && $('#5').html() == $o && $('#9').html() == $o) || 
                     ($('#3').html() == $o && $('#5').html() == $o && $('#7').html() == $o)  
                 ){
-                    $('#playerTurn').html('Player 2 Wins!').addClass('winner');
+                    $player2Score++;
+                    $('#playerTurn').html('Player <span class="purple">2</span> Wins!').addClass('winner');
+                    $('.putScoreHere2').html($player2Score);
                     $('#gameOver').html("GAME OVER!");
-                    // $('.data').html(""); 
-                    // $('.data').removeClass('background-blue');
-                    // $('.data').removeClass('background-pink');
-                    // $clickCounter = 0; 
-                }
-                if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
+                    // $('.data').off("click");
+                }else if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
                     $('#playerTurn').hide();
                     $('#gameOver').html("CAT'S GAME!");
+                    // $('.data').off("click");
                 }
                 $clickCounter++;
             }
@@ -79,16 +77,28 @@ $(document).ready(function(){
     
 
     // Clear Board Function
-    $('#clear').click(function(){
+    $('#clearBoard').click(function(){
         $('.data').html(""); 
-        // $('.data').removeClass('background-blue');
-        // $('.data').removeClass('background-pink');
-        $('.data').removeClass('purple yellow');
+        $('.data').removeClass('purple yellow blue');
         $('#playerTurn').html("");
         $('#playerTurn').show();
         $('#playerTurn').removeClass("winner");
         $('#gameOver').html("");
         $('#playerTurn').html("Player <span class='yellow'>1</span>'s Turn");
         $clickCounter = 0; 
+    });
+
+    // Reset Score Function
+    $('#resetScore').click(function(){
+        $player1Score = 0;
+        $player2Score = 0;
+        $('.data').html(""); 
+        $('.data').removeClass('purple yellow blue');
+        $('#playerTurn').html("");
+        $('#playerTurn').show();
+        $('#playerTurn').removeClass("winner");
+        $('#gameOver').html("");
+        $('.putScoreHere1').html($player1Score);
+        $('.putScoreHere2').html($player2Score);
     });
 });

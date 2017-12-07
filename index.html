@@ -11,28 +11,33 @@
 </head>
 <body>
     <div class="container">
+        <div class="player1Score">Player <span class="yellow">1</span> Score <div class="putScoreHere1 yellow" style="margin-top: 30px;">0</div></div>
+        <div class="player2Score">Player <span class="purple">2</span> Score <div class="putScoreHere2 purple" style="margin-top: 30px;">0</div></div>
         <h1>Tic Tac Toe</h1>
-        <div id="playerTurn"></div>
+        <div id="playerTurn">Player <span class="yellow">1</span>'s Turn</div>
         <div id="gameOver"></div>
+        <!-- Game Board -->
         <table>
             <tr id="row1">
-                <td id="1" class="data">J</td>
-                <td id="2" class="data">I</td>
-                <td id="3" class="data">N</td>
+                <td id="1" class="data"></td>
+                <td id="2" class="data"></td>
+                <td id="3" class="data"></td>
             </tr>
             <tr id="row2"> 
-                <td id="4" class="data">I</td>
-                <td id="5" class="data">S</td>
-                <td id="6" class="data">C</td>
+                <td id="4" class="data"></td>
+                <td id="5" class="data"></td>
+                <td id="6" class="data"></td>
             </tr>
             <tr id="row3">
-                <td id="7" class="data">O</td>
-                <td id="8" class="data">O</td>
-                <td id="9" class="data">L</td>
+                <td id="7" class="data"></td>
+                <td id="8" class="data"></td>
+                <td id="9" class="data"></td>
             </tr>
         </table>
-
-        <button id="clear">Clear Board</button>
+        <!-- Button to clear the board -->
+        <button id="clearBoard">Clear Board</button>
+        <!-- Reset Score -->
+        <button id="resetScore">Reset Score</button>
     </div>
 
     <script

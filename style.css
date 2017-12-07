@@ -19,7 +19,7 @@ body {
 
 h1 {
     font-family: 'Bungee', sans-serif;
-    color: limegreen;
+    color: lime;
     font-size: 100px;
     padding-top: 60px;
     text-shadow: 0 0 15px lime;
@@ -46,13 +46,28 @@ td {
 }
 
 /* Button Styling */
-#clear {
+#clearBoard {
     height: 60px;
     width: 200px;
     padding: 5px;
     position: absolute;
     top: 85%;
-    left: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background-color: limegreen;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Bungee', sans-serif;
+}
+#resetScore {
+    height: 60px;
+    width: 200px;
+    padding: 5px;
+    position: absolute;
+    top: 85%;
+    left: 60%;
     transform: translate(-50%, -50%);
     border: none;
     outline: none;
@@ -62,15 +77,8 @@ td {
     font-family: 'Bungee', sans-serif;
 }
 
-/* Cell Selected Styles */
-/* .background-blue {
-    background-color: rgba(0,0,255,0.4);
-}
 
-.background-pink {
-    background-color: rgba(255,192,203,0.4);
-} */
-
+/* Styling game board, getting rid of some borders */
 [id="1"] {
     border-top: none;
     border-left: none;
@@ -101,7 +109,7 @@ td {
     border-right: none;
 }
 
-
+/* notifications */
 #playerTurn {
     font-size: 30px;
     color: rgb(0,191,255);
@@ -116,6 +124,7 @@ td {
     margin-top: 10px;
 }
 
+/* Colors */
 .purple {
     color: #FF00A5;
     text-shadow: 0 0 2px #FF00A5;
@@ -131,12 +140,14 @@ td {
     text-shadow: 0 0 2px rgb(0,191,255);
 }
 
+
+/* animations */
 .winner {
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-name: winnerText;
     animation-iteration-count: 5;
     animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-inout;
     animation-fill-mode: forwards;
 }
 
@@ -144,7 +155,59 @@ td {
     0%{
         font-size: 30px;
     }
+    15%{
+        font-size: 30px;
+        color: coral;
+    }
+    25%{
+        font-size: 30px;
+        color: yellow;
+    }
+    50%{
+        transform: scale(.5);
+        color: orange;
+    }
+    75%{
+        font-size: 30px;
+        color: lightblue;
+    }
+    90%{
+        font-size: 30px;
+        color: violet;
+    }
     100%{
-        transform: scale(1.7);
+        transform: rotate(720deg) scale(1.7);
     }
 }
+
+/* Scoreboard */
+.player1Score {
+    /* border: 1px solid pink; */
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    font-size: 25px;
+    color: rgb(0,191,255);
+    font-family: 'Bungee', sans-serif;
+   
+}
+
+.player2Score {
+    /* border: 1px solid pink; */
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-size: 25px;
+    color: rgb(0,191,255);
+    font-family: 'Bungee', sans-serif;
+    
+}
+
+.putScoreHere1, .putScoreHere2 {
+    font-size: 60px;
+}
+

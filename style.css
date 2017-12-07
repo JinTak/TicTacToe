@@ -84,9 +84,7 @@ td {
 [id="4"] {
     border-left: none;
 }
-[id="5"] {
-    
-}
+
 [id="6"] {
     border-right: none;
 }
@@ -111,6 +109,10 @@ td {
 }
 #gameOver {
     font-size: 30px;
-    color: red;
+    color: rgb(255,0,0);
     font-family: 'Bungee', sans-serif;
+}
+
+span {
+    color: rgb(255,0,0);
 }

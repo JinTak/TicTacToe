@@ -21,18 +21,18 @@ h1 {
     font-family: 'Bungee', sans-serif;
     color: limegreen;
     font-size: 100px;
-    padding-top: 100px;
+    padding-top: 60px;
     text-shadow: 0 0 15px lime;
 }
 
 table {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 50px;
-    border-spacing: 15px;
+    /* border-spacing: 15px; */
 }
 td {
     border: 2px solid limegreen;
@@ -49,7 +49,6 @@ td {
     height: 60px;
     width: 200px;
     padding: 5px;
-    margin-top: 20px;
     position: absolute;
     top: 85%;
     left: 50%;

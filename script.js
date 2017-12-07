@@ -92,6 +92,12 @@ $(document).ready(function(){
     $('#resetScore').click(function(){
         $player1Score = 0;
         $player2Score = 0;
+        $('.data').html(""); 
+        $('.data').removeClass('purple yellow blue');
+        $('#playerTurn').html("");
+        $('#playerTurn').show();
+        $('#playerTurn').removeClass("winner");
+        $('#gameOver').html("");
         $('.putScoreHere1').html($player1Score);
         $('.putScoreHere2').html($player2Score);
     });

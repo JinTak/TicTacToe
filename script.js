@@ -35,12 +35,11 @@ $(document).ready(function(){
                     $('.putScoreHere1').html($player1Score);
                     $('#gameOver').html("GAME OVER!");
                     // $('.data').off("click");
+                    }else if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
+                        $('#playerTurn').hide();
+                        $('#gameOver').html("CAT'S GAME!");
+                        // $('.data').off("click");
                     }
-                if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
-                    $('#playerTurn').hide();
-                    $('#gameOver').html("CAT'S GAME!");
-                    // $('.data').off("click");
-                }
                 $clickCounter++;
             } else {
                 $(this).html($o).addClass("purple");
@@ -65,8 +64,7 @@ $(document).ready(function(){
                     $('.putScoreHere2').html($player2Score);
                     $('#gameOver').html("GAME OVER!");
                     // $('.data').off("click");
-                }
-                if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
+                }else if($('#1').html() != "" && $('#2').html() != "" && $('#3').html() != "" && $('#4').html() != "" && $('#5').html() != "" && $('#6').html() != "" && $('#7').html() != ""&& $('#8').html() != ""&& $('#9').html() != ""){
                     $('#playerTurn').hide();
                     $('#gameOver').html("CAT'S GAME!");
                     // $('.data').off("click");

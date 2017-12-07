@@ -143,11 +143,11 @@ td {
 
 /* animations */
 .winner {
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-name: winnerText;
     animation-iteration-count: 5;
     animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-inout;
     animation-fill-mode: forwards;
 }
 
@@ -155,8 +155,28 @@ td {
     0%{
         font-size: 30px;
     }
+    15%{
+        font-size: 30px;
+        color: coral;
+    }
+    25%{
+        font-size: 30px;
+        color: yellow;
+    }
+    50%{
+        transform: scale(.5);
+        color: orange;
+    }
+    75%{
+        font-size: 30px;
+        color: lightblue;
+    }
+    90%{
+        font-size: 30px;
+        color: violet;
+    }
     100%{
-        transform: scale(1.7);
+        transform: rotate(720deg) scale(1.7);
     }
 }
 

@@ -62,15 +62,8 @@ td {
     font-family: 'Bungee', sans-serif;
 }
 
-/* Cell Selected Styles */
-/* .background-blue {
-    background-color: rgba(0,0,255,0.4);
-}
 
-.background-pink {
-    background-color: rgba(255,192,203,0.4);
-} */
-
+/* Styling game board, getting rid of some borders */
 [id="1"] {
     border-top: none;
     border-left: none;
@@ -101,7 +94,7 @@ td {
     border-right: none;
 }
 
-
+/* notifications */
 #playerTurn {
     font-size: 30px;
     color: rgb(0,191,255);
@@ -116,6 +109,7 @@ td {
     margin-top: 10px;
 }
 
+/* Colors */
 .purple {
     color: #FF00A5;
     text-shadow: 0 0 2px #FF00A5;
@@ -131,6 +125,8 @@ td {
     text-shadow: 0 0 2px rgb(0,191,255);
 }
 
+
+/* animations */
 .winner {
     animation-duration: 1s;
     animation-name: winnerText;

@@ -46,6 +46,13 @@ td {
 }
 
 /* Button Styling */
+button:hover {
+    box-shadow: 0 0 15px lime;
+    
+}
+button:active {
+    color: rgba(0, 0, 0, .6);
+}
 #clearBoard {
     height: 60px;
     width: 200px;

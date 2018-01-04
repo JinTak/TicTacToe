@@ -1,6 +1,6 @@
 # Retro Tic Tac Toe
 
-![Game](images/SpaceRacer2.jpg)
+![Game](images/TicTacToe.jpg)
 
 ## *** [Play Game](https://jintak.github.io/TicTacToe/) ***
 
